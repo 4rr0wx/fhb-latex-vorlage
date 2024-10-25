@@ -1,0 +1,124 @@
+\documentclass[12pt,a4paper]{article}
+\input{_Packages}
+%\do\? == erlaubtes Zeichen, an dem ein Zeilenumbruch innerhalb der URL stattfinden darf (auch mehrere \do\? erlaubt, z.B. \do\a\do\b\do\c...)
+\appto\UrlBreaks{\do\4}
+\makeglossaries
+
+
+%Metadaten
+% werden verwendet, wenn z.B. für das Titelblatt/Deckblatt der Befehl \maketitle verwendet wird
+\title{FH-Burgenland Vorlage V2}
+\author{Martin Scheifinger}
+\date{\today} %{11.10.2020}
+
+
+%Commandodefinition
+% Defines a new command for the horizontal lines, change thickness here
+% \newcommand{\HRule}{\rule{\linewidth}{0.5mm}} 
+
+%Seitenränder und Druckbereich sowie Kopf- und Fußzeile definieren
+\setlength\paperwidth{20.999cm}
+\setlength\paperheight{29.699cm}
+\setlength\voffset{-2cm}
+\setlength\hoffset{-1cm}
+\setlength\headheight{3.5cm}
+\setlength\headsep{0.5cm}
+\setlength\footskip{1.131cm}
+\setlength\textheight{22cm}
+\setlength\textwidth{17cm}
+%\setlength\marginparwidth{2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Kopfzeile und Fußzeile definieren
+
+\usepackage{fancyhdr}
+\pagestyle{fancy} %eigener Seitenstil
+\fancyhf{} %alle Kopf und Fußzeilenfelder bereinigen
+\fancyhead[L]{BITI 4V - \FachKuerzel}
+\fancyhead[R]{\includegraphics[height=2.5cm]{FH-Burgenland_Logos/FHBurgenland-logo.png}}
+
+
+\let\oldheadrule\headrule% Copy \headrule into \oldheadrule
+
+%uncommend below to make header line türkis
+%\renewcommand{\headrule}{\color{teal}\oldheadrule}% Add colour to \headrule
+
+\renewcommand{\headrulewidth}{0.5pt}%obere Trennlinie
+%\renewcommand{\footrulewidth}{0.0pt} %untere Trennlinie definieren
+\fancyfoot[L]{\SchuelerName}
+\pagenumbering{arabic}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Inhaltsverzeichnis Formatierung definieren
+
+\cftsetindents{section}{0em}{3em}
+\cftsetindents{subsection}{0em}{3em}
+\cftsetindents{subsubsection}{0em}{3em}
+
+\setcounter{tocdepth}{4} %Damit Inhaltsverzeichnis bis zur 4 Ebene
+\renewcommand\thesection{\arabic{section}} %Damit die Nummerierung mit 1 beginnt, vgl.: \roman{section}
+
+\setcounter{secnumdepth}{3} %Damit Nummerierung bis zur Ebene 3 geht
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Start vom eigentlichen Dokument / Schriftstück 
+\begin{document}
+%Deckblatt
+\include{Dokument/Deckblatt}
+
+\newpage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Deckblatt
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aktivieren der verschiedenen Verzeichnisse
+% wobei Quell- und Literaturverzeichnis sich am Ende des Dokumentes befinden.
+
+\tableofcontents\thispagestyle{fancy}
+
+
+\pagenumbering{arabic}
+%\setcounter{page}{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Ende Verzeichnis
+%_______________________________________________________________________________________________________
+%   ###########################################################
+%   #           Metadaten ändern nicht vergessen              #
+%   ###########################################################
+% Dokument: main
+%   Zeile: 36    | Header: Fach Hinzufügen ()
+% Dokument: Deckblatt:
+%   Zeile: 12    | Titel des Dokuments     ()
+%   Zeile: 15&17 | Überschriften           ()
+%   Zeile: 24    | Vortragende Person      ()
+%_______________________________________________________________________________________________________
+\input{_Variables}
+\clearpage
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Anfang Dokument %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ----------------------  Kapitel 1 -----------------------
+\newpage
+\section{Kapitel 1}
+% the Asterix (*) indicates that this section will be added to the table of contents but no number will be present beside it.
+\input{Kapitel/Kapitel_1}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\section{Anhang}
+%Hier einkommentieren wenn man Abbildungsverzeichnis oder Tabellenverzeichnis macht
+%\listoffigures\thispagestyle{fancy}
+%\clearpage
+%\listoftables\thispagestyle{fancy}
+%\clearpage
+% -----------------  ACRONYMS  -------------------
+
+
+\printglossary[type=\acronymtype,nonumberlist,nopostdot]
+
+
+
+\end{document}
