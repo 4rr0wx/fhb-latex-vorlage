@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  14 DEC 2024 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.3.13)  14 DEC 2024 13:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -23,7 +23,7 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (./_Packages.tex (c:/Users/marti/Documents/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
+) (./data/_Packages.tex (c:/Users/marti/Documents/TinyTeX/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks17
 \inpenc@posthook=\toks18
@@ -830,7 +830,7 @@ Package gensymb Info: Using \textmu for \micro on input line 68.
 \c@mv@boldtabular=\count381
 \openout2 = `Dokument/Deckblatt.aux'.
 
- (./Dokument/Deckblatt.tex (./_Variables.tex)
+ (./Dokument/Deckblatt.tex (./data/_Variables.tex)
 <FH-Burgenland_Logos/image1.png, id=15, 6359.76pt x 1589.94pt>
 File: FH-Burgenland_Logos/image1.png Graphic file (type png)
 <use FH-Burgenland_Logos/image1.png>
@@ -868,7 +868,7 @@ LaTeX Font Info:    Font shape `TS1/Arimo-TLF/m/n' will be
 \tf@toc=\write8
 \openout8 = `main.toc'.
 
- (./_Variables.tex)
+ (./data/_Variables.tex)
 <FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png, id=27, 277.2759pt x 100.4553pt>
 File: FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png Graphic file (type png)
 <use FH-Burgenland_Logos/Hochschule_Bgld_Logo_RGB.png>
@@ -906,15 +906,15 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 8EC6426D68EDED6B1630C0C9742A82E0;164.
  ) 
 Here is how much of TeX's memory you used:
- 32944 strings out of 474115
- 630084 string characters out of 5733109
+ 32945 strings out of 474115
+ 630197 string characters out of 5733109
  1930190 words of memory out of 5000000
  54742 multiletter control sequences out of 15000+600000
  566900 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 104i,15n,104p,2401b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 104i,15n,104p,2408b,621s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Users/marti/Documents/TinyTeX/texmf-dist/fonts/type1/google/arimo/Arimo-Bold.pfb><c:/Users/marti/Documents/TinyTeX/texmf-dist/fonts/type1/google/arimo/Arimo.pfb>
-Output written on main.pdf (4 pages, 901041 bytes).
+Output written on main.pdf (4 pages, 900499 bytes).
 PDF statistics:
  54 PDF objects out of 1000 (max. 8388607)
  39 compressed objects within 1 object stream
